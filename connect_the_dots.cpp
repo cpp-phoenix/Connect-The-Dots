@@ -296,7 +296,7 @@ void input(name three,siz len,name one,name two)
         cout<<"Player two turn: ";
        three.get();
        checkresponse(three,len);
-       system("cls");
+       cout<<"\033[2J\033[1;H";
        space(len);
        matrix(len,three,count,pone,ptwo);
        flag=endgame(len);
@@ -311,6 +311,7 @@ void input(name three,siz len,name one,name two)
 int main()
 {
     int i,j;
+    cout<<"\033[2J\033[1;1H";
     cout<<"***************************************************************"<<endl<<endl;
     cout<<"*          Welcome to the game of plus and boxes              *"<<endl<<endl;
     cout<<"***************************************************************"<<endl;
@@ -324,7 +325,7 @@ int main()
     cout<<"Enter the size of matrix(<10): ";
     len.get();
     checksize(len);
-    system("cls");
+    cout<<"\033[2J\033[1;1H";
     space(len);
     for(i=0;i<10;i++)
     {
